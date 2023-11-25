@@ -39,7 +39,7 @@ npm run start
 
 When you do code changes, Webpack-Dev-Server will automatically rebuild and reload the page.
 You can now start developing against a staging environment at https://sm64js-dev.smmdb.net,
-which should be kept up to date.
+which should be kept up to date As of 2023 this Probably won't work on your device. (Common) 
 This staging environment is only set up for client-only development and logins will only work,
 if accessed from https://localhost:9300.
 
