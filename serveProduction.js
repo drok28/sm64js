@@ -751,6 +751,7 @@ app.get('/banIP/:token/:ip', (req, res) => {
     db.get('adminCommands').push({ token, timestampMs: Date.now(), command: 'banIP', args: [ ip ] }).write()
 
     if (ipValue == undefined) {
+        // me when ban womp womp womp womp :trollface:
         db.get('ipList').push({ ip, value: 'BANNED', reason: 'Manual' }).write()
         console.log("Admin BAD IP " + ip + "  " + token)
 
