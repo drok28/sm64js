@@ -5,8 +5,8 @@ const got = require('got')
 const util = require('util')
 const zlib = require('zlib')
 const deflate = util.promisify(zlib.deflate)
-const port = 80
-const ws_port = 3000
+const port = 3000
+const ws_port = 443
 
 
 const low = require('lowdb')
