@@ -73,8 +73,8 @@ const broadcastData = (bytes, roomKey) => {
     }
 }
 
-
-const adminTokens = process.env.ADMIN_TOKENS ? process.env.ADMIN_TOKENS.split(":") : []
+// blank value
+const adminTokens = process.env.ADMIN_TOKENS ? process.env.ADMIN_TOKENS.split(":") : ["tokentest01"]
 
 const sendValidUpdate = () => {
 
