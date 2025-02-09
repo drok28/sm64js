@@ -1,4 +1,4 @@
-# Drok's sm64js! :D
+# sm64js
 
 ### Links
 Main Website: [drok28.github.io/sm64js/](https://drok28.github.io/sm64js/)
