@@ -1,14 +1,10 @@
 # Drok's sm64js! :D
 
 ### Links
-[Main Website: [drok28.github.io/sm64js/](https://drok28.github.io/sm64js/)]
+[Main Website:] [drok28.github.io/sm64js/](https://drok28.github.io/sm64js/)]
 
 ## What is this?
-This is an ongoing work-in-progress port of the decompilation of original Nintendo game, Super Mario 64, to native Javascript (no emulation or web assembly). The project involved creating a Javascript WebGL port of N64 Fast 3D Renderer, originally implemented with OpenGL in C.  This project also includes the development of online mass multiplayer versions of sm64js and other custom multiplayer game modes.
-
-
-## What is this branch for?
-This is for deploying it to Github Pages using something like github actions and docker.
+This is drok's fork of sm64js! :D
 
 ## Build instructions - Windows, Mac, or Linux
 
