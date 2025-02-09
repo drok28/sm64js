@@ -14,7 +14,7 @@ This is drok's fork of sm64js! :D
 ### Run these commands
 ```bash
 # Clone the source code
-git clone https://github.com/sm64js/sm64js.git && cd sm64js
+git clone https://github.com/drok28/sm64js.git && cd sm64js
 # Install node packages
 npm install
 # Launch wepback dev server
@@ -31,13 +31,6 @@ npm run start
 
 You should now be able to access the website with the game from a web browser by typing "localhost" into the address bar.
 
-## Build instructions With Docker - Windows, Mac, or Linux
-
-### First install Docker
-* Windows - [Install Instructions](https://docs.docker.com/docker-for-windows/install-windows-home/)
-* Mac - [Install Instructions](https://docs.docker.com/docker-for-mac/install/)
-* Linux - [Install Instructions](https://docs.docker.com/engine/install/#server)
-
 ### Run these commands
 ```bash
 # Create and start lightweight docker container with NodeJs
@@ -48,7 +41,7 @@ docker exec -it mySm64JsServer /bin/sh
 # Install additional prerequisites
 apk update && apk add git
 # Clone the source code
-git clone https://github.com/sm64js/sm64js.git && cd sm64js
+git clone https://github.com/drok28/sm64js.git && cd sm64js
 
 # Install node packages, build, and serve
 npm run build 
