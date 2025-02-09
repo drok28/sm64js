@@ -621,7 +621,7 @@ const update_decelerating_speed = (m) => {
     return stopped
 }
 
-// EXPERIMENTAL m.forwardVel = 148
+// EXAMPLE m.forwardVel = 148
 
 const act_decelerating = (m) => {
     let val0C
