@@ -29,7 +29,7 @@ module.exports = {
         extensions: ['*', '.js']
     },
     devServer: {
-        port: 80
+        port: 9208
     },
     plugins: [
         new HtmlWebPackPlugin({
@@ -58,7 +58,7 @@ module.exports = {
         // })
     ],
     output: {
-        publicPath: "/",
+        publicPath: "",
         filename: "[name]-[hash].js"
     },
     optimization: {
