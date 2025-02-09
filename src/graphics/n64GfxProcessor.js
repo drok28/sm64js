@@ -35,8 +35,6 @@ const MAX_VERTICES = 64
 const RATIO_X = WebGL.canvas.width / (2.0 * 320.0)
 const RATIO_Y = WebGL.canvas.height / (2.0 * 240.0)
 
-let prev_op = []
-
 export class n64GfxProcessor {
     constructor() {
 
@@ -193,7 +191,7 @@ export class n64GfxProcessor {
             }
         } else { // G_MTX_MODELVIEW
             if ((parameters & Gbi.G_MTX_PUSH) && this.rsp.modelview_matrix_stack_size < 11) {
-                this.rsp.modelview_matrix_stack_size++
+                ++this.rsp.modelview_matrix_stack_size
                 this.rsp.modelview_matrix_stack[this.rsp.modelview_matrix_stack_size - 1] = this.cloneMatrix4x4(this.rsp.modelview_matrix_stack[this.rsp.modelview_matrix_stack_size - 2])
             }
             if (parameters & Gbi.G_MTX_LOAD) {
@@ -214,7 +212,36 @@ export class n64GfxProcessor {
             this.rsp.modelview_matrix_stack[this.rsp.modelview_matrix_stack_size - 1],
             this.rsp.P_matrix,
         )
+    }
 
+    sp_pop_matrix(count) {
+        while (count--) {
+            if (this.rsp.modelview_matrix_stack_size > 0) {
+                if (--this.rsp.modelview_matrix_stack_size > 0) {
+                    this.matrix_mul(
+                        this.rsp.MP_matrix,
+                        this.rsp.modelview_matrix_stack[this.rsp.modelview_matrix_stack_size - 1],
+                        this.rsp.P_matrix
+                    )
+                } else {
+                    this.rsp.modelview_matrix_stack_size++
+                }
+            }
+        }
+    }
+
+    sp_pop_matrix(count) {
+        while (count--) {
+            if (this.rsp.modelview_matrix_stack_size > 0) {
+                if (--this.rsp.modelview_matrix_stack_size > 0) {
+                    this.matrix_mul(
+                        this.rsp.MP_matrix,
+                        this.rsp.modelview_matrix_stack[this.rsp.modelview_matrix_stack_size - 1],
+                        this.rsp.P_matrix
+                    )
+                }
+            }
+        }
     }
 
     sp_geometry_mode(clear, set) {
@@ -951,11 +978,11 @@ export class n64GfxProcessor {
     sp_vertex(dest_index, vertices) {
 
         for (let i = dest_index; i < vertices.length; i++) {
-
             let v = vertices[i]
             if (Array.isArray(v)) {
                 v = {pos: v[0], flag: v[1], tc: v[2], color: v[3]}
             }
+
             const normal = [
                 v.color[0] > 127 ? v.color[0] - 256 : v.color[0],
                 v.color[1] > 127 ? v.color[1] - 256 : v.color[1],
@@ -1056,8 +1083,10 @@ export class n64GfxProcessor {
     }
 
     run_dl(commands) {
+        let prev_op = []
         let next_op = []
         try {
+            
             for (const command of commands) {
                 const opcode = command.words.w0
                 const args = command.words.w1
@@ -1065,7 +1094,7 @@ export class n64GfxProcessor {
 
                 switch (opcode) {
                     case Gbi.G_ENDDL: /// not necessary for JS
-                        prev_op = ["G_ENDDL"]
+                        prev_op = ["G_ENDDL", "N/A"]
                         break
                     case Gbi.G_MOVEMEM:
                         this.sp_movemem(args.type, args.data, args.index)
@@ -1074,6 +1103,9 @@ export class n64GfxProcessor {
                     case Gbi.G_MTX:
                         this.sp_matrix(args.parameters, args.matrix)
                         prev_op = ["G_MTX", `Parameters: ${args.parameters}, Matrix: ${args.matrix}`]
+                        break
+                    case Gbi.G_POPMTX:
+                        this.sp_pop_matrix(1);
                         break
                     case Gbi.G_VTX:
                         this.sp_vertex(args.dest_index, args.vertices)
@@ -1165,7 +1197,10 @@ export class n64GfxProcessor {
                             this.run_dl(args.childDisplayList)
                             return
                         }
-                        prev_op = ["G_DL", `Branch: ${args.branch}, Child Display List: ${args.childDisplayList}`]
+                        prev_op = ["G_DL", `Branch: ${args.branch}, Child Display List: `]
+                        for (const cmd of args.childDisplayList) {
+                            prev_op[1] += `${cmd.words.w0} ${cmd.words.w1} | `
+                        }
                         break
                     default:
                         console.log(command)
@@ -1173,7 +1208,9 @@ export class n64GfxProcessor {
                 }
             }
         } catch (e) {
-            console.log(`PREV CMD: ${prev_op[0]}, with args ${prev_op[1]} -> ${next_op[0]} : ${next_op[1]}\n${e}`)
+            console.log(`PREV CMD: ${prev_op[0]}, with args ${prev_op[1]} -> ${next_op[0]} :\n\t`)
+            console.dir(next_op[1], {depth: null})
+            console.log(e);
         }
     }
 

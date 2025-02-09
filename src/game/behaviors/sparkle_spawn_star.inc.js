@@ -35,9 +35,9 @@ const bhv_spawned_star_init = () => {
 
     let starIndex = (o.rawData[oBehParams] >> 24) & 0xFF;
 
-    // if (1 << starIndex & save_file_get_star_flags(Area.gCurrSaveFileNum - 1, COURSE_NUM_TO_INDEX(Area.gCurrCourseNum))) {
-    //     cur_obj_set_model(MODEL_TRANSPARENT_STAR);
-    // }
+    if (1 << starIndex & save_file_get_star_flags(Area.gCurrSaveFileNum - 1, COURSE_NUM_TO_INDEX(Area.gCurrCourseNum))) {
+        cur_obj_set_model(MODEL_TRANSPARENT_STAR);
+    }
 
     cur_obj_play_sound_2(SOUND_GENERAL2_STAR_APPEARS);
 }
@@ -139,8 +139,10 @@ const bhv_spawned_star_loop = () => {
     o.rawData[oInteractStatus] = 0;
 }
 
-export const bhv_spawn_star_no_level_exit = (starIndex) => {
-    let star = spawn_object(sp20, MODEL_STAR, gLinker.behaviors.bhvSpawnedStarNoLevelExit);
+const bhv_spawn_star_no_level_exit = (starIndex) => {
+    const o = gLinker.ObjectListProcessor.gCurrentObject;
+    
+    let star = spawn_object(o, MODEL_STAR, gLinker.behaviors.bhvSpawnedStarNoLevelExit);
     star.rawData[oBehParams] = starIndex << 24;
     star.rawData[oInteractionSubtype] = INT_SUBTYPE_NO_EXIT;
     obj_set_angle(star, 0, 0, 0);
@@ -148,3 +150,4 @@ export const bhv_spawn_star_no_level_exit = (starIndex) => {
 
 gLinker.bhv_spawned_star_init = bhv_spawned_star_init
 gLinker.bhv_spawned_star_loop = bhv_spawned_star_loop
+gLinker.bhv_spawn_star_no_level_exit = bhv_spawn_star_no_level_exit

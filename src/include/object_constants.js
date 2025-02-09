@@ -1291,6 +1291,18 @@ export const WOODEN_POST_BP_NO_COINS_MASK = 0x0000FF00
     export const BBH_NEAR_MERRY_GO_ROUND_ROOM = 10
     export const BBH_DYNAMIC_SURFACE_ROOM     = 0
     export const BBH_OUTSIDE_ROOM             = 13
+    
+/* Coffin Spawner */
+    /* oAction */
+    export const COFFIN_SPAWNER_ACT_COFFINS_UNLOADED = 0
+    
+/* Coffin */
+    /* oAction */
+    export const COFFIN_ACT_IDLE     = 0
+    export const COFFIN_ACT_STAND_UP = 1
+
+    /* oBhvParams2ndByte */
+    export const COFFIN_BP_STATIC = 0
 
 /* Bob-omb */
     /* oBehParams2ndByte */
@@ -1313,6 +1325,41 @@ export const WOODEN_POST_BP_NO_COINS_MASK = 0x0000FF00
     export const ENEMY_LAKITU_SUB_ACT_NO_SPINY    = 0
     export const ENEMY_LAKITU_SUB_ACT_HOLD_SPINY  = 1
     export const ENEMY_LAKITU_SUB_ACT_THROW_SPINY = 2
+
+/* Coin Formation */
+    /* oAction */
+    export const COIN_FORMATION_ACT_SPAWN_COINS   = 0
+    export const COIN_FORMATION_ACT_IDLE          = 1
+    export const COIN_FORMATION_ACT_RESPAWN_COINS = 2
+
+    /* oBhvParams2ndByte */
+    export const COIN_FORMATION_BP_FLAG_HORIZONTAL = (0 << 0)
+    export const COIN_FORMATION_BP_FLAG_VERTICAL   = (1 << 0)
+    export const COIN_FORMATION_BP_FLAG_RING       = (1 << 1)
+    export const COIN_FORMATION_BP_FLAG_ARROW      = (1 << 2)
+    export const COIN_FORMATION_BP_FLAG_FLYING     = (1 << 4)
+    export const COIN_FORMATION_BP_FLAG_MASK       = (COIN_FORMATION_BP_FLAG_HORIZONTAL | 
+                                                      COIN_FORMATION_BP_FLAG_VERTICAL |
+                                                      COIN_FORMATION_BP_FLAG_RING |
+                                                      COIN_FORMATION_BP_FLAG_ARROW)
+
+    export const COIN_FORMATION_BP_LINE_HORIZONTAL = (COIN_FORMATION_BP_FLAG_HORIZONTAL)
+    export const COIN_FORMATION_BP_LINE_VERTICAL   = (COIN_FORMATION_BP_FLAG_VERTICAL)
+    export const COIN_FORMATION_BP_RING_HORIZONTAL = (COIN_FORMATION_BP_FLAG_HORIZONTAL | COIN_FORMATION_BP_FLAG_RING)
+    export const COIN_FORMATION_BP_RING_VERTICAL   = (COIN_FORMATION_BP_FLAG_VERTICAL | COIN_FORMATION_BP_FLAG_RING)
+    export const COIN_FORMATION_BP_ARROW           = (COIN_FORMATION_BP_FLAG_ARROW)
+    
+/* Hidden Blue Coin */
+    /* oAction */
+    export const HIDDEN_BLUE_COIN_ACT_INACTIVE = 0
+    export const HIDDEN_BLUE_COIN_ACT_WAITING  = 1
+    export const HIDDEN_BLUE_COIN_ACT_ACTIVE   = 2
+
+/* Blue Coin Switch */
+    /* oAction */
+    export const BLUE_COIN_SWITCH_ACT_IDLE     = 0
+    export const BLUE_COIN_SWITCH_ACT_RECEDING = 1
+    export const BLUE_COIN_SWITCH_ACT_TICKING  = 2
 
 /* Cloud */
     /* oAction */

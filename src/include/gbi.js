@@ -406,28 +406,62 @@ export const G_CC_PRIMITIVE = {
     rgb: [15, 15, 31, 3]
 }
 
-export const G_CC_MODULATERGB = {
+export const G_CC_SHADE = {
     alpha: [7, 7, 7, 4],
-    rgb: [1, 15, 4, 7]
+    rgb: [15, 15, 31, 4]
 }
+
 
 export const G_CC_MODULATEI = {
     alpha: [7, 7, 7, 4],
     rgb: [1, 15, 4, 7]
 }
 
+export const G_CC_MODULATEIDECALA = {
+    alpha: [7, 7, 7, 1],
+    rgb: [1, 15, 4, 7]
+}
+
+export const G_CC_MODULATEIFADE = {
+    alpha: [7, 7, 7, 5],
+    rgb: [1, 15, 4, 7]
+}
+
+
+export const G_CC_MODULATERGB = {
+    alpha: [7, 7, 7, 4],
+    rgb: [1, 15, 4, 7]
+}
+
+export const G_CC_MODULATERGBDECALA = {
+    alpha: [7, 7, 7, 1],
+    rgb: [1, 15, 4, 7]
+}
 
 export const G_CC_MODULATERGBFADE = { 
     alpha: [7, 7, 7, 5],
     rgb: [1, 15, 4, 7]
 }
 
-export const G_CC_MODULATERGBA = {
+
+export const G_CC_MODULATEIA = {
     alpha: [1, 7, 4, 7],
     rgb: [1, 15, 4, 7]
 }
 
-export const G_CC_MODULATEIA = {
+export const G_CC_MODULATEIFADEA = {
+    alpha: [1, 7, 5, 7],
+    rgb: [1, 15, 4, 7]
+}
+
+
+export const G_CC_MODULATEFADE = {
+    alpha: [5, 7, 1, 7],
+    rgb: [1, 15, 4, 7]
+}
+
+
+export const G_CC_MODULATERGBA = {
     alpha: [1, 7, 4, 7],
     rgb: [1, 15, 4, 7]
 }
@@ -437,14 +471,26 @@ export const G_CC_MODULATERGBFADEA = {
     rgb: [1, 15, 4, 7]
 }
 
-export const G_CC_MODULATEIFADEA = {
-    alpha: [1, 7, 5, 7],
-    rgb: [1, 15, 4, 7]
+
+export const G_CC_MODULATEI_PRIM = {
+    alpha: [7, 7, 7, 3],
+    rgb: [1, 15, 3, 7]
 }
 
-export const G_CC_MODULATEIDECALA = {
+export const GCC_MODULATEIA_PRIM = {
+    alpha: [1, 7, 3, 7],
+    rgb: [1, 15, 3, 7]
+}
+
+export const G_CC_MODULATEIDECALA_PRIM = {
     alpha: [7, 7, 7, 1],
-    rgb: [1, 15, 4, 7]
+    rgb: [1, 15, 3, 7]
+}
+
+
+export const G_CC_MODULATERGB_PRIM = {
+    alpha: [7, 7, 7, 3],
+    rgb: [1, 15, 3, 7]
 }
 
 export const G_CC_MODULATERGBA_PRIM = {
@@ -452,26 +498,33 @@ export const G_CC_MODULATERGBA_PRIM = {
     rgb: [1, 15, 3, 7]
 }
 
-export const G_CC_SHADE = {
-    alpha: [7, 7, 7, 4],
-    rgb: [15, 15, 31, 4]
-}
-
-export const G_CC_SHADEFADEA = {
-    alpha: [7, 7, 7, 5],
-    rgb: [15, 15, 31, 4]
-}
-
-// this is probably wrong
-export const G_CC_BLENDRGBA = {
+export const G_CC_MODULATERGBDECALA_PRIM = {
     alpha: [7, 7, 7, 1],
-    rgb: [1, 4, 8, 4]
+    rgb: [1, 15, 3, 7]
 }
 
-export const G_CC_BLENDRGBFADEA = {
-    alpha: [7, 7, 7, 5],
-    rgb: [1, 4, 8, 4]
+
+export const G_CC_FADE = {
+    alpha: [4, 7, 5, 7],
+    rgb: [4, 15, 5, 7]
 }
+
+export const G_CC_FADEA = {
+    alpha: [1, 7, 5, 7],
+    rgb: [1, 15, 5, 7]
+}
+
+
+export const G_CC_DECALRGB = {
+    alpha: [7, 7, 7, 4],
+    rgb: [15, 15, 31, 1]
+}
+
+export const G_CC_DECALRGBA = {
+    alpha: [7, 7, 7, 1],
+    rgb: [15, 15, 31, 1]
+}
+
 
 export const G_CC_DECALFADE = {
     alpha: [7, 7, 7, 5],
@@ -483,34 +536,68 @@ export const G_CC_DECALFADEA = {
     rgb: [15, 15, 31, 1]
 }
 
-export const G_CC_DECALRGBA = {
+
+export const G_CC_BLENDI = {
+    alpha: [7, 7, 7, 4],
+    rgb: [5, 4, 1, 4]
+}
+
+export const G_CC_BLENDIA = {
+    alpha: [1, 7, 4, 7],
+    rgb: [5, 4, 1, 4]
+}
+
+export const G_CC_BLENDIDECALA = {
     alpha: [7, 7, 7, 1],
-    rgb: [15, 15, 31, 1]
+    rgb: [5, 4, 1, 4]
 }
 
-export const G_CC_DECALRGB = {
+
+export const G_CC_BLENDRGBA = {
     alpha: [7, 7, 7, 4],
-    rgb: [15, 15, 31, 1]
+    rgb: [1, 4, 8, 4]
 }
 
-export const G_CC_DECALRGB2 = {  // FIXME (copied from G_CC_DECALRGB)
+export const G_CC_BLENDRGBDECALA = {
+    alpha: [7, 7, 7, 1],
+    rgb: [1, 4, 8, 4]
+}
+
+export const G_CC_BLENDRGBFADEA = {
+    alpha: [7, 7, 7, 5],
+    rgb: [1, 4, 8, 4]
+}
+
+
+export const G_CC_ADDRGB = {
     alpha: [7, 7, 7, 4],
-    rgb: [15, 15, 31, 1]
+    rgb: [1, 15, 1, 4]
 }
 
-export const G_CC_FADE = {  // FIXME (copied from G_CC_FADEA)
-    alpha: [1, 7, 7, 5],
-    rgb: [1, 15, 4, 7]
+export const G_CC_ADDRGBDECALA = {
+    alpha: [7, 7, 7, 1],
+    rgb: [1, 15, 1, 4]
 }
 
-export const G_CC_FADEA = {  // FIXME (copied from MODULATEIFADEA)
-    alpha: [1, 7, 5, 7],
-    rgb: [1, 15, 4, 7]
+export const G_CC_ADDRGBFADE = {
+    alpha: [7, 7, 7, 5],
+    rgb: [1, 15, 1, 4]
 }
 
-export const G_CC_TRILERP = {  // FIXME
+
+export const G_CC_SHADEFADEA = {
+    alpha: [7, 7, 7, 5],
+    rgb: [15, 15, 31, 4]
+}
+
+export const G_CC_DECALRGB2 = {
     alpha: [7, 7, 7, 4],
-    rgb: [15, 15, 31, 1]
+    rgb: [15, 15, 31, 0]
+}
+
+export const G_CC_TRILERP = {
+    alpha: [2, 1, 0, 1],
+    rgb: [2, 1, 13, 1]
 }
 
 export const G_CC_HILITERGBA = {
@@ -735,6 +822,7 @@ export const gDPSetCycleType = (displaylist, newmode) => {
 }
 
 export const gSPVertex = (displaylist, vertices, num_vertices, dest_index) => {
+    vertices = vertices.slice(0, num_vertices)
     displaylist.push({
         words: {
             w0: G_VTX,
@@ -810,7 +898,7 @@ export const gSPDisplayList = (displaylist, childDisplayList) => {
     displaylist.push({
         words: {
             w0: G_DL,
-            w1: { childDisplayList, branch: G_DL_PUSH }
+            w1: { childDisplayList: childDisplayList, branch: G_DL_PUSH }
         }
     })
 }
@@ -854,11 +942,20 @@ export const gDPLoadTextureBlock = (displaylist, timg, fmt, siz, width, height, 
     )
 }
 
+export const gDPSetTile = (displaylist, fmt, siz, line, tmem, tile, palette, cmt, maskt, shiftt, cms, masks, shifts) => {
+    displaylist.push({
+        words: {
+            w0: G_SETTILE,
+            w1: { fmt, siz, line, tmem, tile, palette, cmt, maskt, shiftt, cms, masks, shifts }
+        }
+    })
+}
+
 export const gsSPDisplayList = (childDisplayList) => {
     return {
         words: {
             w0: G_DL,
-            w1: { childDisplayList, branch: G_DL_PUSH }
+            w1: { childDisplayList: childDisplayList, branch: G_DL_PUSH }
         }
     }
 }
@@ -881,14 +978,15 @@ export const gsSPEndDisplayList = () => {
     }
 }
 
-/* export const gsSPGeometryMode = (c, s) => {
+export const gsSPGeometryMode = (c, s) => {
     return {
         words: {
             w0: G_GEOMETRYMODE | ~c,
             w1: s
         }
     }
-} */
+}
+export const gsSPGeometryModeSetFirst = gsSPGeometryMode;
 
 export const gsDPSetAlphaCompare = (newmode) => {
     return {
@@ -1103,14 +1201,13 @@ export const gsSPTexture = (s, t, level, tile, on) => {
   }
 }
 
-export const gSPPopMatrix = (pkt, n) => {
-    pkt = pkt.pop()
-    return {
+export const gSPPopMatrix = (displayList, n) => {
+    displayList.push({
         words: {
             w0: G_POPMTX,
-            w1: { pkt, n }
+            w1: { n }
         }
-    }
+    })
 }
 
 export const gsDPSetTileSize = (t, uls, ult, lrs, lrt) => {
@@ -1200,5 +1297,11 @@ export const gDPPipeSync = () => {return []}
 export const gDPLoadSync = () => {return []}
 export const gDPTileSync = () => {return []}
 export const gDPSetAlpha = () => {return []}
-export const gSPPerspNormalize = () => {return []}
+export const gSPPerspNormalize = (pkt, s) => {return [{
+        words: {
+            w0: G_MOVEWORD,
+            w1: { data: s, offset: 0, index: G_MW_PERSPNORM }
+        }
+    }]
+}
 export const gsDPSetDepthSource = () => {return []}
