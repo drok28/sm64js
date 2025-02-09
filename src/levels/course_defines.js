@@ -36,7 +36,6 @@ export const COURSE_STAGES_MAX   = 15
 export const COURSE_STAGES_COUNT = 15
 export const COURSE_BONUS_STAGES = 16
 
-
 const define_course = (id, cameras) => {
     return { name, level, course, short, texture, reaches, echo1, echo2, echo3, music, camera }
 }

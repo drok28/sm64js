@@ -53,6 +53,8 @@ export const LEVEL_CCM_2            = 57
 export const LEVEL_CASTLE_2         = 602
 export const LEVEL_CASTLE_3         = 41
 
+export const LEVEL_MBF              = 1000
+
 // Define lists for list of level for macros. Each of the following fields are described:
 // Argument 1: Internal ROM name of the level.
 // Argument 2: Level enumerator for enum used to identify the level ID.
