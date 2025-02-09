@@ -2,7 +2,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title>sm64js</title>
+    <title>drok's sm64js</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -17,21 +17,18 @@
     <div class="cover-container d-flex h-100 mx-auto flex-column">
         <header class="masthead">
             <div class="inner">
-                <h3 class="masthead-brand rainbowText">Super Mario 64 JS</h3>
+                <h3 class="masthead-brand rainbowText">Drok's SM64JS</h3>
                 <nav class="nav nav-masthead justify-content-center">
-                    <a class="nav-link" href="https://sm64js.com">MMO</a>
-                    <a class="nav-link" href="https://60fps.sm64js.com">60 FPS</a>
                     <a class="nav-link" href="#What">About</a>
-                    <a class="nav-link" href="https://github.com/sm64js/sm64js">Source Code</a>
-                    <a class="nav-link" href="https://discord.gg/7UaDnJt">Discord Server</a>
+                    <a class="nav-link" href="https://github.com/drok28/sm64js">Source Code</a>
                     <a class="nav-link" href="#Contact">Contact</a>
                 </nav>
             </div>
         </header>
 
         <main role="main" class="inner cover" hidden id="mainContent">
-            <h1 class="cover-heading rainbowText">Super Mario 64 - Javascript Port</h1>
-            <h6 style="color:red">This project is currently still being developed. This page may be live from time to time for testing, but there may be glitches and performance issues. The server will go down and restart at random times without warning. If you would like to help with the project or have feedback please contact me.</h6>
+            <h1 class="cover-heading rainbowText">Drok's SM64JS</h1>
+            <h6 style="color:red">This project is currently still being developed.</h6>
             <div id="rom" hidden>
                 <form id="romSelect" class="form-group">
                     <h4 style="color:#fa3e3e">Select US sm64 (z64) ROM File from your computer</h4>
@@ -145,7 +142,7 @@
                     <div class="col-3">
                         <button type="button"
                                 class="btn btn-sm btn-primary"
-                                onclick="location.href='https://github.com/sm64js/sm64js/issues'">
+                                onclick="location.href='https://github.com/drok28/sm64js/issues'">
                             Submit Bug
                         </button>
 
@@ -169,31 +166,8 @@
             <a name="What"></a>
             <h4>What is this?</h4>
             <p>
-                This is an ongoing work-in-progress port of the <a href="https://github.com/n64decomp/sm64">decompilation</a> of original Nintendo game, Super Mario 64, to native JavaScript (No Emulation) (No Web Assembly).
-                This project required creating a JavaScript WebGL port of <a href="https://github.com/Emill/n64-fast3d-engine">N64 Fast 3D Renderer</a> originally implemented with OpenGL in C. This project also includes the development of online mass multiplayer versions of sm64js and other custom multiplayer game modes.
+            Drok's epic fork of sm64js :D
             </p>
-            <br />
-
-            <a name="Purpose"></a>
-            <h4>What is the purpose of this port?</h4>
-            <ul style="display:inline-block;vertical-align:middle;text-align:left">
-                <li>
-                    <b>Extensibility:</b> More access to more developers to add custom content
-                    <ul style="padding-left:40px">
-                        <li>Rapid Prototyping</li>
-                        <li>More friendly to importing other software modules/packages</li>
-                        <li>More friendly to prototyping multiplayer custom games/mods</li>
-                    </ul>
-                </li>
-                <li><b>Portablity:</b> Sm64 projects can run on any device with a web browser anywhere without needing to download or install anything</li>
-                <li>Opportunity to refactor / rewrite with modern coding style and cleanup</li>
-            </ul>
-            <br />
-            <br />
-
-            <a name="WASM"></a>
-            <h4>What's wrong with Web Assembly / Emscripten</h4>
-            <p>Nothing. However, I believe access to this game's source code in a higher level programming language opens it up to a wider pool of potentially capable developers / modders. And seems to me like a natural next step following in the amazing work done by the decomp team and pc port.</p>
             <br />
 
             <a name="Credits"></a>
@@ -203,7 +177,21 @@
 
             <div class="row" style="justify-content:center;">
                 <h5>
-                    <a style="font-weight:bold !important;" href="https://github.com/sm64js/sm64js/graphs/contributors">Developers / Contributors</a>
+                    <a style="font-weight:bold !important;" href="https://github.com/drok28/sm64js/graphs/contributors">Developers / Contributors</a>
+                </h5>
+
+            </div>
+            <div class="row" style="justify-content:center;">
+                <p>
+                    <a style="color:#fdffd4" href="https://github.com/drok28">Drok27</a>,
+                    <a style="color:#fdffd4" href="https://github.com/GManTheMarioGuy">GManTheMarioGuy</a>
+                </p>
+            </div>
+            <br />
+
+                        <div class="row" style="justify-content:center;">
+                <h5>
+                    <a style="font-weight:bold !important;" href="https://github.com/sm64js/sm64js/graphs/contributors">SM64JS Developers / Contributors</a>
                 </h5>
 
             </div>
@@ -222,7 +210,8 @@
             </div>
             <br />
 
-
+    
+            
             <div class="row">
                 <div class="col-6">
                     <h6><a style="font-weight:bold !important" href="https://github.com/n64decomp/sm64">Super Mario 64 Decomp</a></h6>
@@ -241,7 +230,7 @@
                     <p class="mb-0">
                         OpenGL Implementation of a 3D renderer for the Nintendo 64's graphics
                     </p>
-                    <small>   (I had to reimplement this in JavaScript and WebGL)   </small>
+                    <small>   (Snuffy had to reimplement this in JavaScript and WebGL)   </small>
                 </div>
             </div>
 
@@ -256,7 +245,7 @@
 
                     </p>
                     <small>
-                        (Special thanks to <a href="https://github.com/djoslin0">djoslin0</a>, the developer of this project, for consultation and advice on the implementation of multiplayer for sm64js. I also ported some  code from this project directly)
+                        (Special thanks to <a href="https://github.com/djoslin0">djoslin0</a>, the developer of this project, for consultation and advice on the implementation of multiplayer for sm64js. Snuffy also ported some  code from this project directly)
                     </small>
                 </div>
             </div>
@@ -285,18 +274,6 @@
                     <a style="color:#fdffd4" href="https://github.com/Emill">Emill</a>,
                 </p>
             </div>
-
-
-            <a name="Contact"></a>
-            <h4>Contact</h4>
-            <p>
-                Questions? Suggestions? Want to help with this project? =)
-                <br />
-                I have a discord server dedicated to sm64js: <a href="https://discord.gg/7UaDnJt"> Join Here </a>
-                <br />
-                Discord: snuffysasa
-            </p>
-            <br />
 
         </main>
 
