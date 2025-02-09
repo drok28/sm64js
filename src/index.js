@@ -124,11 +124,16 @@ window.enterFullScreenMode = () => {
 
 window.snapshotLocation = () => {
     if (gameStarted) {
-        let loc = Game.snapshot_location()
-        let level = "&level=" + loc.level
-        let pos = "&pos=" + Math.round(loc.yaw) + "," + Math.round(loc.x) + "," + Math.round(loc.y) + "," + Math.round(loc.z)
-        let scr = window.fullWindowMode ? "&fullscreen=1" : ""
-        window.history.replaceState(null, "", window.location.origin + "?autostart=1" + level + pos + scr)
+        let loc = Game.snapshot_location();
+        let level = "&level=" + loc.level;
+        let pos = "&pos=" + Math.round(loc.yaw) + "," + Math.round(loc.x) + "," + Math.round(loc.y) + "," + Math.round(loc.z);
+        let scr = window.fullWindowMode ? "&fullscreen=1" : "";
+        let currentPath = window.location.pathname;
+        window.history.replaceState(
+            null,
+            "",
+            currentPath + "?autostart=1" + level + pos + scr
+        )
     }
 }
 
