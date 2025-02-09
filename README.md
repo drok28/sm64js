@@ -1,7 +1,7 @@
 # Drok's sm64js! :D
 
 ### Links
-Main Website: [drok28.github.io/sm64js/](https://drok28.github.io/sm64js/)]
+Main Website: [drok28.github.io/sm64js/](https://drok28.github.io/sm64js/)
 
 ## What is this?
 This is drok's fork of sm64js! :D
