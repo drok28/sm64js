@@ -621,6 +621,8 @@ const update_decelerating_speed = (m) => {
     return stopped
 }
 
+// EXPERIMENTAL m.forwardVel = 148
+
 const act_decelerating = (m) => {
     let val0C
     let slopeClass = mario_get_floor_class(m)
